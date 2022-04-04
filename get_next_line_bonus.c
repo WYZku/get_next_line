@@ -6,7 +6,7 @@
 /*   By: kwoowong <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 17:28:57 by kwoowong          #+#    #+#             */
-/*   Updated: 2022/04/04 22:11:53 by kwoowong         ###   ########.fr       */
+/*   Updated: 2022/04/05 00:00:34 by kwoowong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ char	*get_next_line(int fd)
 
 	if (fd == -1 || BUFFER_SIZE <= 0)
 		return (NULL);
-	str[fd] = ft_read_file(fd, str);
+	str[fd] = ft_read_file(fd, str[fd]);
 	if (!str[fd])
 		return (NULL);
 	res = ft_get_current_line(str[fd]);
